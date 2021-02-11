@@ -10,12 +10,12 @@ public class OrderedItems {
     @EmbeddedId
     OrderedItemsKey id;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne()
     @MapsId("orderId")
     @JoinColumn(name = "order_id",referencedColumnName = "id")
     Order order;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne()
     @MapsId("productId")
     @JoinColumn(name = "product_id",referencedColumnName = "id")
     Product product;

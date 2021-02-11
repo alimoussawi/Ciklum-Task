@@ -2,8 +2,6 @@ package dao;
 
 import entities.Product;
 
-import java.io.IOException;
-import java.sql.SQLException;
 import java.util.List;
 
 public interface ProductDao {
@@ -13,7 +11,9 @@ public interface ProductDao {
 
     boolean insertProduct(Product product);
 
-    boolean updateProduct();
+    boolean updateProduct(Product product);
 
-    boolean deleteProduct();
+    boolean deleteProduct(int productId);
+
+    int deleteAllProducts();
 }

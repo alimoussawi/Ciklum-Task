@@ -3,7 +3,6 @@ package entities;
 
 import javax.persistence.*;
 import java.sql.Date;
-import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -26,11 +25,11 @@ public class Product {
     public Product() {
     }
 
-    public Product(String name, int price, String status, Date createdAt) {
+    public Product(String name, int price, String status) {
         this.name = name;
         this.price = price;
         this.status = status;
-        this.createdAt = createdAt;
+        this.createdAt = new Date(new java.util.Date().getTime());
     }
 
     public int getId() {
